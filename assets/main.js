@@ -22,9 +22,10 @@ var app = new Vue({
             // .then( () => serve a recuperare correttamente il this)
 
 
-        axios.get("https://flynn.boolean.careers/exercises/api/random/mail").then((response)=> {
-            // variabile singola che verrà trasformata in un array in un secondo momento
-            //console.log(response)
+        axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+        .then((response)=> {
+            //variabile singola che verrà trasformata in un array in un secondo momento
+            // console.log(response.data)
             let emailSingola = response.data.response
             this.emailArray.push( emailSingola )
             })
